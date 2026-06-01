@@ -1,0 +1,71 @@
+﻿# ============================================================
+# Peka - Personal Engineered Knowledge Assistant
+# Requirements with version pinning and categorization
+# ============================================================
+# Last Updated: May 31, 2026
+# UPCOMING: Add extras for optional features (audio_engines, video_tools, etc.)
+
+# ── Core AI & API ────────────────────────────────────────────
+google-genai>=0.4.0          # Google Gemini API client
+google-generativeai>=0.7.0   # Google generative AI library
+requests>=2.31.0             # HTTP client for API calls
+
+# ── Audio Processing ────────────────────────────────────────
+sounddevice>=0.4.6           # Audio input/output device handling
+
+# ── User Interface ──────────────────────────────────────────
+pyqt6>=6.6.0                 # Modern GUI framework (Gemini-inspired design)
+pyqt6-sip>=13.6.0            # PyQt6 SIP bindings
+
+# ── Image & Media Processing ────────────────────────────────
+pillow>=10.1.0               # Image processing library
+opencv-python>=4.8.0         # Computer vision and image processing
+numpy>=1.24.0                # Numerical computing
+
+# ── Web & Browser Automation ────────────────────────────────
+playwright>=1.40.0           # Browser automation (Chrome, Firefox, Safari, Edge)
+beautifulsoup4>=4.12.0       # HTML/XML parsing
+duckduckgo-search>=3.9.0     # Web search via DuckDuckGo
+
+# ── System & Desktop Control ────────────────────────────────
+pyautogui>=0.9.53            # Automated mouse/keyboard control
+pyperclip>=1.8.2             # Clipboard access
+pygetwindow>=0.0.9           # Window management
+mss>=9.0.0                   # Screen capture
+psutil>=5.9.0                # System monitoring and process management
+comtypes>=1.2.0              # Windows COM interface
+pycaw>=20231226              # Audio device control (PulseAudio)
+win10toast>=0.0.8            # Windows 10 toast notifications
+send2trash>=1.8.2            # Safe file deletion to trash
+pywinauto>=0.6.9             # Windows GUI automation
+
+# ── Data & File Processing ──────────────────────────────────
+python-pptx>=0.6.21          # PowerPoint file generation/editing
+youtube-transcript-api>=0.6.0  # YouTube video transcript extraction
+
+# ============================================================
+# UPCOMING FEATURES & SUGGESTED ADDITIONS:
+# ============================================================
+# [ ] cryptography>=41.0.0 - For config file encryption
+# [ ] pydantic>=2.5.0 - Data validation and settings management
+# [ ] rich>=13.7.0 - Beautiful terminal output
+# [ ] click>=8.1.0 - CLI framework improvements
+# [ ] python-dotenv>=1.0.0 - Environment variable management
+# [ ] pytest>=7.4.0 - Testing framework
+# [ ] black>=23.12.0 - Code formatting (dev only)
+# [ ] pylint>=3.0.0 - Code linting (dev only)
+# [ ] mypy>=1.7.0 - Type checking (dev only)
+# [ ] aiohttp>=3.9.0 - Async HTTP for parallel API calls
+# [ ] sqlalchemy>=2.0.0 - Database ORM for persistent memory
+# [ ] redis>=5.0.0 - Cache backend for session data
+# [ ] sentry-sdk>=1.38.0 - Error tracking and monitoring
+# [ ] openai>=1.3.0 - Fallback AI backend
+# [ ] anthropic>=0.7.0 - Claude API support (future)
+
+# ============================================================
+# PERFORMANCE TUNING RECOMMENDATIONS:
+# ============================================================
+# - Use pip install --use-deprecated=legacy-resolver for faster installs
+# - Consider using conda for faster binary package installation
+# - On macOS/Linux: Use system package manager for some dependencies (ffmpeg, etc.)
+# - On Windows: Ensure Visual Studio Build Tools installed for compilation
