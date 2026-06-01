@@ -559,6 +559,41 @@ Before any tool call that includes user-typed or voice-transcribed content, a li
 
 ---
 
+## 🙌 Acknowledgements & Developer Recognition
+
+Building Peka is no small feat. This project sits at the intersection of real-time audio
+streaming, OS-level automation, multi-agent orchestration, and a polished desktop UI —
+a combination that produces a uniquely brutal debugging surface.
+
+To every developer who has opened an issue, traced a race condition at 2am, untangled a
+PyQt6 signal deadlock, wrestled with platform-specific audio drivers, or submitted a fix
+for a tool that silently swallowed its exception — this section is for you.
+
+### What makes contributions here genuinely hard
+
+- **Concurrency everywhere** — audio threads, vision threads, agent executors, and the UI
+  event loop all run simultaneously. A bug that only appears under specific timing is the
+  norm, not the exception.
+- **Platform surface area** — the same code runs on Windows, macOS, and Linux, each with
+  different audio APIs, subprocess behaviours, path separators, and permission models.
+- **Tool sprawl** — 21 specialized tools means 21 different external surfaces (browsers,
+  game clients, messaging apps, OS APIs) that can break independently and without warning.
+- **Voice latency is unforgiving** — a 200ms regression in the audio pipeline is
+  immediately felt by the user. There is no hiding behind a loading spinner.
+- **State complexity** — persistent memory, compressed session history, a priority task
+  queue, and a circuit breaker all interact. Edge cases compound.
+
+### A note on the grind
+
+Every crash log filed, every "works on my machine" tracked down to a locale setting,
+every memory leak hunted across a 300-turn session — that work is what keeps Peka
+reliable for everyone. The unglamorous bugs are often the most important ones to fix.
+
+If you have contributed code, documentation, testing, or even a well-written bug report:
+**thank you. Seriously.**
+
+---
+
 ## License
 
 > Personal and non-commercial use only. See `LICENSE` for full terms.
